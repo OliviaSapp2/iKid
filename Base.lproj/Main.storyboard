@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="5120" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Main View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click on a Joke Category in the Nav Bar" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oin-OJ-brZ">
+                                <rect key="frame" x="76" y="362" width="241" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EX-20-TUb">
+                                <rect key="frame" x="0.0" y="42" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home " id="Rcc-fB-YLi"/>
+                                    <barButtonItem title="Good " id="Wao-uc-dbg">
+                                        <connections>
+                                            <segue destination="iJa-aE-oKg" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="ZRw-rL-XfD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pun " id="gCQ-XG-ims">
+                                        <connections>
+                                            <segue destination="54Q-ax-aAs" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="d1c-bm-P4O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad " id="t1d-0x-wML">
+                                        <connections>
+                                            <segue destination="0jr-As-HRt" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="UdB-Bi-609"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1EX-20-TUb" secondAttribute="trailing" id="6N6-ug-pr4"/>
+                            <constraint firstItem="Oin-OJ-brZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="9db-oJ-dJo"/>
+                            <constraint firstItem="1EX-20-TUb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ABf-5k-f5g"/>
+                            <constraint firstItem="Oin-OJ-brZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lev-AJ-ejC"/>
+                            <constraint firstItem="Oin-OJ-brZ" firstAttribute="top" secondItem="1EX-20-TUb" secondAttribute="bottom" constant="276" id="Q5Z-2a-p6o"/>
+                            <constraint firstItem="Oin-OJ-brZ" firstAttribute="centerX" secondItem="1EX-20-TUb" secondAttribute="centerX" id="ZCJ-WK-1GP"/>
+                            <constraint firstItem="1EX-20-TUb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="42" id="kWZ-Oi-dxU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aI1-fx-zX2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1039" y="384"/>
+        </scene>
+        <!--Dad View Controller-->
+        <scene sceneID="8uW-3b-gcO">
+            <objects>
+                <viewController id="0jr-As-HRt" userLabel="Dad View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FqC-yw-u4h">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="353-Gv-9ka">
+                                <rect key="frame" x="270" y="624" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Why?"/>
+                                <connections>
+                                    <segue destination="GiH-IF-d34" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="ADD-Db-GCC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="How many storm troopers does it take to change a lightbulb?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eZd-Fs-ORl">
+                                <rect key="frame" x="76" y="337" width="240" height="140.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-lR-dQ0">
+                                <rect key="frame" x="0.0" y="41" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home " id="Wjr-IC-90d">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="ETL-41-lo0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good " id="Dsq-Tu-r1i">
+                                        <connections>
+                                            <segue destination="iJa-aE-oKg" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="zmH-4B-gJF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pun " id="rKd-ne-usB">
+                                        <connections>
+                                            <segue destination="54Q-ax-aAs" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Vzv-Fz-cqb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad " id="AjJ-ei-Zxd"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Ru-Vm-eeu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Ru-Vm-eeu" firstAttribute="trailing" secondItem="Uoy-lR-dQ0" secondAttribute="trailing" id="Ap8-no-qbA"/>
+                            <constraint firstItem="Uoy-lR-dQ0" firstAttribute="leading" secondItem="FqC-yw-u4h" secondAttribute="leading" id="G3V-hb-FIe"/>
+                            <constraint firstItem="Uoy-lR-dQ0" firstAttribute="top" secondItem="FqC-yw-u4h" secondAttribute="top" constant="41" id="hVw-jC-CkG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bxJ-IM-8fZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFl-pm-af6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="727"/>
+        </scene>
+        <!--Pun View Controller-->
+        <scene sceneID="5u3-Xa-qPe">
+            <objects>
+                <viewController id="54Q-ax-aAs" userLabel="Pun View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0kc-i9-aFI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpu-NN-0h8">
+                                <rect key="frame" x="258" y="565" width="73" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="What?"/>
+                                <connections>
+                                    <segue destination="aAg-K3-VuY" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="dyc-qP-FI6"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What do you call cheese that is not yours?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R8T-ay-pIP">
+                                <rect key="frame" x="76" y="362" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y89-CL-seZ">
+                                <rect key="frame" x="0.0" y="41" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home " id="LPY-zm-y43">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="QM9-4e-CEA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good " id="tXx-El-d5Y">
+                                        <connections>
+                                            <segue destination="iJa-aE-oKg" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="tSA-jc-vAN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pun " id="PTI-v3-433"/>
+                                    <barButtonItem title="Dad " id="cqr-QA-g1f">
+                                        <connections>
+                                            <segue destination="0jr-As-HRt" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="BjR-jR-VJ3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LBd-k7-lV7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y89-CL-seZ" firstAttribute="top" secondItem="0kc-i9-aFI" secondAttribute="top" constant="41" id="DyX-W3-MLw"/>
+                            <constraint firstItem="LBd-k7-lV7" firstAttribute="trailing" secondItem="y89-CL-seZ" secondAttribute="trailing" id="ZjJ-cQ-RSt"/>
+                            <constraint firstItem="y89-CL-seZ" firstAttribute="leading" secondItem="0kc-i9-aFI" secondAttribute="leading" id="pPu-du-0WL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDk-go-7AD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="1493"/>
+        </scene>
+        <!--Pun answer View Controller-->
+        <scene sceneID="GGp-o9-3wC">
+            <objects>
+                <viewController id="aAg-K3-VuY" userLabel="Pun answer View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BhW-Yd-oT9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nachocheese" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-km-OiG">
+                                <rect key="frame" x="91" y="273" width="211" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-wr-ghS">
+                                <rect key="frame" x="-6" y="41" width="399" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home " id="hCt-wT-uPo">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="VUs-mE-7PN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good " id="ggB-q7-8UY">
+                                        <connections>
+                                            <segue destination="iJa-aE-oKg" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="Wey-PP-skN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pun " id="7QS-qP-Uom">
+                                        <connections>
+                                            <segue destination="54Q-ax-aAs" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="dMi-G7-wV1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad " id="axB-BC-vhh">
+                                        <connections>
+                                            <segue destination="0jr-As-HRt" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="1Kn-X2-hRh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xIb-2p-XNe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bkR-wr-ghS" firstAttribute="top" secondItem="BhW-Yd-oT9" secondAttribute="top" constant="41" id="6Dh-bQ-2ZY"/>
+                            <constraint firstItem="bkR-wr-ghS" firstAttribute="leading" secondItem="BhW-Yd-oT9" secondAttribute="leading" id="GLQ-o3-Wcf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1k-K3-xbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="1493"/>
+        </scene>
+        <!--Dad answer View Controller-->
+        <scene sceneID="Fzf-l8-Vsu">
+            <objects>
+                <viewController id="GiH-IF-d34" userLabel="Dad answer View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FAW-ea-16U">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="None, because they are all on the dark side." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a1E-Ye-nXc">
+                                <rect key="frame" x="76" y="321" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFk-n7-50h">
+                                <rect key="frame" x="-6" y="41" width="399" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home " id="dbU-uI-nJw">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="c6h-CJ-tHV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good " id="QcY-Lh-Dd3">
+                                        <connections>
+                                            <segue destination="iJa-aE-oKg" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="GhV-N8-hPi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pun " id="yJm-Kg-5IS">
+                                        <connections>
+                                            <segue destination="54Q-ax-aAs" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="osq-aZ-KeL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad " id="bZU-ZA-ALY">
+                                        <connections>
+                                            <segue destination="0jr-As-HRt" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="xdG-3x-c9s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tji-5c-449"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nFk-n7-50h" firstAttribute="top" secondItem="FAW-ea-16U" secondAttribute="top" constant="41" id="IEk-EH-Jki"/>
+                            <constraint firstItem="nFk-n7-50h" firstAttribute="leading" secondItem="FAW-ea-16U" secondAttribute="leading" id="V2b-mK-pyc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="M20-ef-z1t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2B5-8j-USG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="728"/>
+        </scene>
+        <!--Good View Controller-->
+        <scene sceneID="pky-du-9Bf">
+            <objects>
+                <viewController id="iJa-aE-oKg" userLabel="Good View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S50-KK-fdI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Knock Knock" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jLx-gM-4Bh">
+                                <rect key="frame" x="76" y="356" width="240" height="140.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi0-d3-rqu">
+                                <rect key="frame" x="205" y="587" width="139" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Who's there?"/>
+                                <connections>
+                                    <segue destination="Aey-co-pVs" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="PaW-s8-N0B"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ysa-5L-SBi">
+                                <rect key="frame" x="-4" y="41" width="394" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home " id="7mK-jM-SFA">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="GyF-bQ-QMf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good " id="Ax7-qf-e42"/>
+                                    <barButtonItem title="Pun " id="gne-9N-aHy">
+                                        <connections>
+                                            <segue destination="54Q-ax-aAs" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="wql-FD-Vap"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad " id="f5Y-Xm-tMf">
+                                        <connections>
+                                            <segue destination="0jr-As-HRt" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="fKn-TP-40m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N1j-mO-XqM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ysa-5L-SBi" firstAttribute="top" secondItem="S50-KK-fdI" secondAttribute="top" constant="41" id="zPc-Pe-h7N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zdD-cX-bBd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Gp-z0-hgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820.61068702290072" y="-35.211267605633807"/>
+        </scene>
+        <!--Good Answer View Controller-->
+        <scene sceneID="pOB-Nu-uiy">
+            <objects>
+                <viewController id="Aey-co-pVs" userLabel="Good Answer View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8U2-G6-UUH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Adore" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JDv-L7-og2">
+                                <rect key="frame" x="76" y="390" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0br-pI-1ww">
+                                <rect key="frame" x="210" y="564" width="139" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Adore Who?"/>
+                                <connections>
+                                    <segue destination="gQ3-jG-P4n" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="vDU-i8-xyg"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6km-hg-3k3">
+                                <rect key="frame" x="-7" y="41" width="399" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Home " id="owI-RC-1qa">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="aje-op-FNv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good " id="X9y-Ou-Clk">
+                                        <connections>
+                                            <segue destination="iJa-aE-oKg" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="hzw-db-Cpu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pun " id="r9f-mB-zWH">
+                                        <connections>
+                                            <segue destination="54Q-ax-aAs" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="lnt-u1-VPK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad " id="Ttx-EZ-vv3">
+                                        <connections>
+                                            <segue destination="0jr-As-HRt" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="x6s-mM-G66"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aSD-2f-83r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AuF-Ka-E1E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzQ-H5-l0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="-53"/>
+        </scene>
+        <!--knock knock answer View Controller-->
+        <scene sceneID="gg7-Ox-ofs">
+            <objects>
+                <viewController id="gQ3-jG-P4n" userLabel="knock knock answer View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdN-AY-QjH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Adore is between us, so please open up!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-tf-rJP">
+                                <rect key="frame" x="76" y="380" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGr-cA-1WS">
+                                <rect key="frame" x="-5" y="41" width="394" height="44"/>
+                                <items>
+                                    <barButtonItem title="Home " id="5OQ-CQ-VZH">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="S17-Nr-CXV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Good " id="nkk-kr-3sP">
+                                        <connections>
+                                            <segue destination="iJa-aE-oKg" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="8fQ-nh-Dk7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pun " id="4o1-4k-6vy">
+                                        <connections>
+                                            <segue destination="54Q-ax-aAs" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="obQ-c3-BTV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Dad " id="VtW-Jz-PLO">
+                                        <connections>
+                                            <segue destination="0jr-As-HRt" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="8gh-wj-W2h"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tJq-ho-OKE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sGr-cA-1WS" firstAttribute="top" secondItem="vdN-AY-QjH" secondAttribute="top" constant="41" id="4JT-4m-wxT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xAK-cf-mz5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YM0-sP-to3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2624" y="-54"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wey-PP-skN"/>
+        <segue reference="dMi-G7-wV1"/>
+        <segue reference="1Kn-X2-hRh"/>
+        <segue reference="VUs-mE-7PN"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="nachocheese" width="183" height="275"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
